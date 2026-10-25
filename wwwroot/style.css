@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background:
+        linear-gradient(135deg, #1e1f2b, #1a1b27);
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculadora {
+    /* align-items: center;
+    align-content: center; */
+    width: 100%;
+    max-width: 370px;
+    padding: 24px;
+    border: 1px solid #303144;
+    border-radius: 28px;
+    background: #191a27;
+    box-shadow: 0 24px 70px #0006;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    margin-bottom: 32px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    /*     align-content: center;*/
+    gap: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    color: #a5a0ff;
+    font-size: 24px;
+}
+
+/* .status {
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #24372f;
+    color: #82e6b0;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+} */
+
+.display {
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 18px 4px 24px;
+    overflow: hidden;
+}
+
+/* #expression {
+    max-width: 100%;
+    color: #9698ad;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+} */
+
+#result {
+    max-width: 100%;
+    color: #ffffff;
+    font-size: clamp(36px, 10vw, 52px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.key {
+    min-width: 0;
+    height: 62px;
+    border: 0;
+    border-radius: 18px;
+    color: #f5f5fa;
+    font-size: 21px;
+    cursor: pointer;
+    transition: transform 0.12s, filter 0.12s;
+}
+
+.key:hover {
+    filter: brightness(1.2);
+}
+
+.key:active {
+    transform: scale(0.94);
+}
+
+.number {
+    background: #292b3b;
+}
+
+.function {
+    background: #38394b;
+    color: #c7c7db;
+}
+
+.operator {
+    background: #5550c9;
+    font-size: 25px;
+}
+
+.equals {
+    background: #8b83ff;
+    color: #17152e;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+footer {
+    margin-top: 24px;
+    color: #77798f;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .keypad {
+        gap: 8px;
+    }
+
+    .key {
+        height: 56px;
+        border-radius: 15px;
+    }
+}
