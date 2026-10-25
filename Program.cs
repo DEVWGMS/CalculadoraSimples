@@ -14,4 +14,9 @@ app.MapGet("/api/calculadora/subtrair", (double a, double b) =>
     return a - b;
 });
 
+app.MapGet("/api/calculadora/multiplicar", (double a, double b) =>
+{
+    return a * b;
+});
+
 app.Run();
